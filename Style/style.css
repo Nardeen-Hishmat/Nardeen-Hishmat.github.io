@@ -1,0 +1,360 @@
+@font-face {
+    font-family: Predator;
+    src: url(../Fonts/Squares-Regular.otf);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Predator";
+    font-weight: 400;
+    font-style: normal;
+}
+
+.circle-img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FF1493; /* Pink Border */
+}
+
+/* Customize scrollbar */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: #0a000a; /* Dark Pinkish Black */
+    border-radius: 15px;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: #FF1493; /* Hot Pink */
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #D500F9; /* Magenta on hover */
+}
+
+body{
+    background-color: #050105; /* Very Dark Background */
+    overflow-x: hidden; 
+}
+
+/* Gradient Texts (Pink to Purple) */
+.h-grad
+{     
+    background-image: linear-gradient(to right, #FF1493, #D500F9); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 1000px;
+    font-size: 35px;
+}
+
+.h-grad-2
+{
+    background-image: linear-gradient(to right, #FF1493, #D500F9, #9d00ff); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    width: 1000px;
+    font-size: 25px;
+}
+
+.code-grad
+{
+    background-image: linear-gradient(to right, #FF1493, #D500F9);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+a
+{
+    text-decoration: none;
+} 
+
+.cap-l 
+  {
+    font-weight: bolder;
+  }
+.cap-l-l{
+    
+    background-image: linear-gradient(to right, #FF1493, #bc13fe); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+#p-light
+{
+    color: #ff99cc; /* Soft Pink text */
+}
+
+/* header photo */ 
+
+.header-photo
+{ 
+    width: 100%;
+    height: 400px;
+    background-image: url("../Images/main-bg.jpg"); /* Note: You might want to change this image later to a pink one */
+    background-size: cover;
+}
+.gradient
+{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( #050105cc,#050105 ); /* Dark Fade */
+}
+
+/* Nav bar */
+header
+{    
+    width: 100%;
+    height: 120px;
+}
+
+/* nav logo */ 
+.logo-back
+{
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+}
+
+.logo img
+{
+    max-width: 55%;
+    background-color: #1a0515;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}   
+.logo img{
+    transform: scale(1.1);
+    box-shadow : 1px 1px 15px 5px #FF1493; /* Pink Glow */
+}
+
+/* nav list */
+
+.nav-list{
+    border: 3px solid #FF1493 ;
+    border-radius: 25px;
+    background-image: linear-gradient(to left,#0a000a ,#1a0515);
+}
+.nav-list ul
+{
+    list-style: none;
+}
+
+.nav-list a 
+{
+    text-decoration: none;
+    color: #ffccff;
+    transition: all 0.1s ease-in-out;
+}
+.nav-list li
+{
+    transition: all 0.1s ease-in-out;
+}
+.nav-list li a:hover{
+    color: #FF1493 ;
+    text-shadow: 0 0 10px #FF1493;
+}
+
+
+/* button */
+
+.nav-btn  
+{
+  text-decoration: none;
+  color: #000;
+  background-color: #FF1493; /* Pink Button */
+  padding: 6px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bolder;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 10px #FF1493;
+}
+
+.nav-btn:hover{
+    background-color: #D500F9;
+    color: white;
+}
+
+
+/* header*/
+.header-contet{
+    width: 100%;
+}
+
+.header-text > p 
+{
+    color: #FF1493;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.header-text h1
+{
+    font-weight: bolder;
+    font-size: 70px;
+    text-shadow: 2px 2px #bc13fe;
+}
+
+/*header buttons */ 
+.head-fbtn 
+{
+    color: white;
+    background: #FF1493;
+    padding: 10px 50px;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #FF1493;
+    box-shadow: 0 0 15px #FF1493;
+}
+.head-fbtn:hover
+{
+    color: #FF1493;
+    background-color: transparent;
+    border: #FF1493 2px solid;   
+}
+
+  .head-sbtn
+  { 
+    background-color: transparent;
+    border: #FF1493 solid 2px;
+    color: white; 
+    padding: 10px 50px;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .head-sbtn:hover {
+    color: white;
+    background-color: #FF1493;
+    box-shadow: 0 0 15px #FF1493;
+  }
+
+  /* About */ 
+  
+  .about,.benifets
+  {
+    width: 100%;
+    height: 600px;
+    background-color: #050105;
+  }
+
+  .internal-box
+  {
+    height: 95%;
+    background-color: #1a0515; /* Dark Purple bg */
+    border-radius: 15px;
+    transition: all 0.1s ease-in-out;
+    color: white;
+    box-shadow: 1px 1px 10px 2px #FF1493; /* Pink Box Shadow */
+    border: 1px solid #bc13fe;
+  }
+
+  .internal-box > h1{
+    font-weight: bolder;
+    font-size: 45px;
+    color: #ff99cc;
+    text-shadow: 0 0 5px #D500F9;
+  }
+
+  /*About img **/ 
+  .about-img img
+  {
+    object-fit: cover;
+    max-width: 50%;
+    filter: drop-shadow(0 0 10px #FF1493);
+  }
+
+  /* benift */
+.benf-cont
+{
+    height: 70%;
+}
+
+.benf-img img
+{
+    max-width: 50%;
+    margin-left: 150px;
+}
+.ben-list ul li
+{
+    margin-bottom: 0;
+}
+
+
+/*Cards */
+.cards{
+    width: 100%;
+    height: 850px;
+    box-shadow: 0px -5px 20px #FF1493; /* Upper Glow */
+}
+.card-cards
+{
+    background-color:#16051c;
+    border-radius: 10px;
+    height: 15em;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #38004e;
+}
+.card-cards:hover
+{
+    padding: 20px;
+    box-shadow: 0px 0px 15px #FF1493;
+    border: 1px solid #FF1493;
+}
+
+.card-cards > h2
+{
+    font-weight: 700;
+    color: #ffccff;
+}
+
+
+/* footer */ 
+
+footer{
+    border-top:#FF1493 2px solid;
+    height: 250px;
+    width: 100%;
+    background-image: linear-gradient(to left, #000000, #1a0515, #240024);
+    box-shadow: 0px -5px 20px #FF1493;
+}
+
+footer li
+{
+    list-style: none;   
+}
+footer li a 
+{
+    color: #ffccff;
+    transition: all 0.2s ease-in-out;
+}
+footer li a:hover
+{
+    color: #FF1493;
+    text-shadow: 0 0 10px #FF1493;
+}
+footer svg 
+{
+    height: 30px;
+    border-radius: 100%;
+    transition: all 0.2s ease-in-out;
+    fill: #ffccff;
+}
+footer svg:hover 
+{
+    transform: scale(1.2);
+    fill: #FF1493;
+}
+
+.links-list
+{
+    margin-right: 100px;
+}
