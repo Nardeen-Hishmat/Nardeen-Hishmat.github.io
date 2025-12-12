@@ -5,24 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">Nardeen Hishmat | Skills</title>
     <link rel="icon" href="https://github.com/Nardeen-Hishmat.png" type="image/icon type">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="Style/style.css">
     <link rel="stylesheet" href="Style/animation.css">
     <link rel="stylesheet" href="Style/Skills.css">
     
     <style>
-        /* تنسيق إضافي للأيقونات عشان تبقى نيون */
-        .tech-icon {
-            font-size: 3.5rem;
-            margin: 15px;
-            color: #D500F9; /* لون موف فاتح */
+        /* تنسيق خاص لقائمة المهارات */
+        .skill-item {
+            background-color: #ffffff;
+            border: 1px solid #ffe6f2;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between; /* يفصل الكلام عن الأيقونات */
+            align-items: center;
             transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
         }
-        .tech-icon:hover {
-            color: #FF1493; /* تتحول لبينك لما تقفي عليها */
-            transform: scale(1.2);
-            text-shadow: 0 0 10px #FF1493;
+        
+        .skill-item:hover {
+            border-color: #FF1493;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.1);
+        }
+
+        .skill-text {
+            color: #555;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .skill-icons i {
+            font-size: 1.8rem; /* حجم مناسب للأيقونة */
+            margin-left: 15px;
+            color: #D500F9; /* لون موف */
+            transition: transform 0.2s;
+        }
+
+        .skill-icons i:hover {
+            color: #FF1493; /* يقلب بينك */
+            transform: scale(1.3);
         }
     </style>
 </head>
@@ -30,112 +55,129 @@
 
     <div class="header-photo">
         <div class="gradient">
-
-    <header class="nav">
-        <div class="container">
-            <div class="row nav-back  h-100 d-flex justify-content-between align-items-center">
-                <div class="logo col-2"><div class="logo-back"><a href="index.html"><img src="https://github.com/Nardeen-Hishmat.png" alt="Logo"></a></div></div>
-                <div class="nav-list col-7 d-flex justify-content-between align-items-center  ">
-                    <ul class="d-flex justify-content-between gap-5 mt-3">
-                        <li class="go-commun"><a class="go-commun" href="mailto:nardeenhishmat@gmail.com">Contact Me</a></li>
-                        <li><a href="About.html" >About</a></li>
-                        <li><a href="Projects.html"  >Projects</a></li>
-                        <li><a href="index.html">Home</a></li>
-                    </ul>
-
-                    <div>
-                        <button class="nav-btn btn" onclick="window.open('Nardeen.pdf', '_blank')"> Download CV </button>
+            <header class="nav">
+                <div class="container">
+                    <div class="row nav-back h-100 d-flex justify-content-between align-items-center">
+                        <div class="logo col-2"><div class="logo-back"><a href="index.html"><img src="https://github.com/Nardeen-Hishmat.png" alt="Logo"></a></div></div>
+                        <div class="nav-list col-7 d-flex justify-content-between align-items-center">
+                            <ul class="d-flex justify-content-between gap-5 mt-3">
+                                <li class="go-commun"><a class="go-commun" href="mailto:nardeenhishmat@gmail.com">Contact Me</a></li>
+                                <li><a href="About.html">About</a></li>
+                                <li><a href="Projects.html">Projects</a></li>
+                                <li><a href="index.html">Home</a></li>
+                            </ul>
+                            <div>
+                                <button class="nav-btn btn" onclick="window.open('Nardeen.pdf', '_blank')"> Download CV </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
-            <section class="header-team ">
+            </header>
+            <section class="header-team">
                 <div class="container h-100 d-flex text-center justify-content-center align-items-center flex-column">
-                    <h1 class="typed-os h-grad"> [nardeen@devops ~]$ <span class="auto-type-skills"></span></h1>
+                    <h1 class="typed-os h-grad">[nardeen@devops ~]$ <span class="auto-type-skills"></span></h1>
                 </div>
             </section>
-
         </div>
     </div>
 
-<section class="cards-team">
+    <section class="cards-team">
         <div class="container">
-            <div class="row justify-content-evenly my-4">
-                <div class="card-team col-12 col-md-6 col-lg-4">
-                    <div class="container d-flex flex-column gap-2 my-4">
-                        <h3>Technical Skills & Tools</h3>
+            <div class="row justify-content-center my-4">
+                <div class="col-12 col-lg-10"> <div class="container d-flex flex-column gap-2 my-4">
+                        <h3 class="text-center mb-4" style="color: #FF1493; font-weight: bold;">Technical Skills & Tools</h3>
 
-                        <div class="ben-list row">
-                            <div class="col-md-6">
-                                <ul>
-                                    <li id="p-light-about"><strong>Cloud & IaC:</strong> AWS (EC2, S3, VPC), Terraform, Vagrant.</li>
-                                    <li id="p-light-about"><strong>Containerization:</strong> Docker, Kubernetes, OpenShift.</li>
-                                    <li id="p-light-about"><strong>Configuration Mgmt:</strong> Ansible.</li>
-                                    <li id="p-light-about"><strong>CI/CD:</strong> Jenkins, GitHub Actions, Git.</li>
-                                    <li id="p-light-about"><strong>Monitoring:</strong> Prometheus, Grafana.</li>
-                                    <li id="p-light-about"><strong>Scripting:</strong> Python, Bash Scripting.</li>
-                                    <li id="p-light-about"><strong>Networking:</strong> CCNA (Routing, Switching).</li>
-                                    <li id="p-light-about"><strong>Operating Systems:</strong> Linux (Red Hat, Ubuntu).</li>
-                                </ul>
+                        <div class="skill-item">
+                            <p class="skill-text"><strong>Cloud & IaC:</strong> AWS (EC2, S3, VPC), Terraform, Vagrant.</p>
+                            <div class="skill-icons">
+                                <i class="fa-brands fa-aws" title="AWS"></i>
+                                <i class="fa-solid fa-cloud" title="Terraform/Cloud"></i>
                             </div>
+                        </div>
 
-                            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
-                                <div class="row mb-2 justify-content-center">
-                                    <i class="fa-brands fa-aws tech-icon" title="AWS"></i>
-                                    <i class="fa-brands fa-docker tech-icon" title="Docker"></i>
-                                    <i class="fa-brands fa-jenkins tech-icon" title="Jenkins"></i>
-                                </div>
-                                <div class="row mb-2 justify-content-center">
-                                    <i class="fa-brands fa-linux tech-icon" title="Linux"></i>
-                                    <i class="fa-solid fa-server tech-icon" title="Ansible/Terraform"></i> <i class="fa-brands fa-git-alt tech-icon" title="Git"></i>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <i class="fa-brands fa-python tech-icon" title="Python"></i>
-                                    <i class="fa-solid fa-terminal tech-icon" title="Bash"></i>
-                                    <i class="fa-solid fa-network-wired tech-icon" title="Networking"></i>
-                                </div>
+                        <div class="skill-item">
+                            <p class="skill-text"><strong>Containerization:</strong> Docker, Kubernetes, OpenShift.</p>
+                            <div class="skill-icons">
+                                <i class="fa-brands fa-docker" title="Docker"></i>
+                                <i class="fa-solid fa-dharmachakra" title="Kubernetes"></i>
                             </div>
+                        </div>
 
+                        <div class="skill-item">
+                            <p class="skill-text"><strong>CI/CD:</strong> Jenkins, GitHub Actions, Git.</p>
+                            <div class="skill-icons">
+                                <i class="fa-brands fa-jenkins" title="Jenkins"></i>
+                                <i class="fa-brands fa-git-alt" title="Git"></i>
+                            </div>
+                        </div>
 
+                        <div class="skill-item">
+                            <p class="skill-text"><strong>Config Mgmt:</strong> Ansible.</p>
+                            <div class="skill-icons">
+                                <i class="fa-solid fa-server" title="Ansible"></i>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <p class="skill-text"><strong>Operating Systems:</strong> Linux (Red Hat, Ubuntu).</p>
+                            <div class="skill-icons">
+                                <i class="fa-brands fa-linux" title="Linux"></i>
+                                <i class="fa-brands fa-ubuntu" title="Ubuntu"></i>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <p class="skill-text"><strong>Scripting:</strong> Python, Bash Scripting.</p>
+                            <div class="skill-icons">
+                                <i class="fa-brands fa-python" title="Python"></i>
+                                <i class="fa-solid fa-terminal" title="Bash"></i>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <p class="skill-text"><strong>Networking:</strong> CCNA (Routing, Switching).</p>
+                            <div class="skill-icons">
+                                <i class="fa-solid fa-network-wired" title="Networking"></i>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <p class="skill-text"><strong>Monitoring:</strong> Prometheus, Grafana.</p>
+                            <div class="skill-icons">
+                                <i class="fa-solid fa-chart-line" title="Monitoring"></i>
+                            </div>
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-</section>
+    </section>
 
-
-<footer >
-    <div class="row justify-content-center">
-        
-        <div class="col-md-4 text-center">
-            <h4 class="cap-l-l m-4">Connect</h4>
-            <ul class="foot-list text-light d-flex flex-column align-items-center">
-                <li><a href="mailto:nardeenhishmat@gmail.com" target="_blank">Email <code class="code-grad">[nardeenhishmat@gmail.com]</code></a></li>
-                <li><a href="https://www.linkedin.com/in/nardeen-hishmat-ageeb/" target="_blank">LinkedIn <code class="code-grad">[Nardeen Hishmat]</code></a></li>
-                <li><a href="https://github.com/Nardeen-Hishmat" target="_blank">GitHub <code class="code-grad">[@Nardeen-Hishmat]</code></a></li>
-            </ul>
+    <footer>
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+                <h4 class="cap-l-l m-4">Connect</h4>
+                <ul class="foot-list text-light d-flex flex-column align-items-center">
+                    <li><a href="mailto:nardeenhishmat@gmail.com" target="_blank">Email <code class="code-grad">[nardeenhishmat@gmail.com]</code></a></li>
+                    <li><a href="https://www.linkedin.com/in/nardeen-hishmat-ageeb/" target="_blank">LinkedIn <code class="code-grad">[Nardeen Hishmat]</code></a></li>
+                    <li><a href="https://github.com/Nardeen-Hishmat" target="_blank">GitHub <code class="code-grad">[@Nardeen-Hishmat]</code></a></li>
+                </ul>
+            </div>
         </div>
-
-    </div>
-
-    <div class="row h-75 col-12 align-items-center justify-content-center foot-likns mt-4">
-        <div class="col-auto d-flex gap-4">
-            <a href="https://github.com/Nardeen-Hishmat" target="_blank"><i class="fa-brands fa-github fa-2x" style="color: #FF1493;"></i></a>
-            <a href="https://www.linkedin.com/in/nardeen-hishmat-ageeb/" target="_blank"><i class="fa-brands fa-linkedin fa-2x" style="color: #FF1493;"></i></a>
+        <div class="row h-75 col-12 align-items-center justify-content-center foot-likns mt-4">
+            <div class="col-auto d-flex gap-4">
+                <a href="https://github.com/Nardeen-Hishmat" target="_blank"><i class="fa-brands fa-github fa-2x" style="color: #FF1493;"></i></a>
+                <a href="https://www.linkedin.com/in/nardeen-hishmat-ageeb/" target="_blank"><i class="fa-brands fa-linkedin fa-2x" style="color: #FF1493;"></i></a>
+            </div>
         </div>
-    </div>
-        
-    <div class="copy-right text-light mx-3 text-center mt-4">
-        <p id="p-light"> <code class="code-grad">&copy; Copyright <span id="currentYear"></span> Nardeen Hishmat</code></p>
-    </div>
+        <div class="copy-right text-light mx-3 text-center mt-4">
+            <p id="p-light"> <code class="code-grad">&copy; Copyright <span id="currentYear"></span> Nardeen Hishmat</code></p>
+        </div>
+    </footer>
 
-</footer>
-
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="Script/Skills.js"></script>
 
 </body>
