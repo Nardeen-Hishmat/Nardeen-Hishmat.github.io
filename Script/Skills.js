@@ -1,36 +1,32 @@
-// JavaScript to scroll to section
+/* Scroll Logic */
 document.addEventListener("DOMContentLoaded", function() {
     const scrollLinks = document.querySelectorAll('.go-commun');
     scrollLinks.forEach(function(scrollLink) {
         scrollLink.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default anchor behavior
-
+            event.preventDefault(); 
             const targetSections = document.querySelectorAll(".icon-cy");
-
             targetSections.forEach(targetSection => {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
                 targetSection.classList.add('flashing');
-
                 setTimeout(() => {
                     targetSection.classList.remove('flashing');
-                }, 10000);
+                }, 3000);
             });
         });
     });
 });
 
 window.onload = function() {
-    var title = document.getElementById("pageTitle");
+    /* Code to add image near title if needed (Commented out to keep clean) */
+    /* var title = document.getElementById("pageTitle");
     var img = document.createElement("img");
-    title.insertBefore(img, title.firstChild);
+    if(title) title.insertBefore(img, title.firstChild); */
 
-    // Initialize Typed.js for the auto-type effect
-    var options = {
-        strings: ["Skills", "Tools", "Operating Systems"], // Add your desired texts here
-        typeSpeed: 120,
-        backSpeed: 120,
+    // Typing Animation
+    var typed = new Typed(".auto-type-skills", {
+        strings: ["Technical Skills", "DevOps Tools", "Cloud Platforms"], 
+        typeSpeed: 100,
+        backSpeed: 50,
         loop: true
-    };
-
-    var typed = new Typed(".auto-type-skills", options);
+    });
 };

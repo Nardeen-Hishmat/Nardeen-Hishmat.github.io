@@ -1,4 +1,3 @@
-
 li {
     list-style: none;
 }
@@ -7,6 +6,7 @@ header{
     width: 100%;
     height: 120px;
 }
+
 /* header-team */
 .header-team {
     width: 100%;
@@ -15,9 +15,10 @@ header{
 
 .header-team h1 {
     font-size: 3rem;
-    color: #e4e4e4;
+    color: #333333; /* غيرته لرمادي غامق عشان يبان على الخلفية الفاتحة */
     font-weight: bolder;
     width: 1000px;
+    text-shadow: 2px 2px 0px #ffe6f2; /* ظل خفيف جداً */
 }
 
 /* cards */
@@ -25,66 +26,73 @@ header{
     height: 100%;
     width: 100%;
 }
+
 .text-color-custom {
-    color: #7B64FC;
+    color: #FF1493; /* خليته هوت بينك */
 }
 
+/* الكارت الخارجي الكبير */
 .card-team {
-    background-color: #041a2b;
+    background-color: #ffffff; /* أبيض ناصع */
     border-radius: 20px;
-    width: 100%; /* Make the card fill the available width */
-    padding: 10px; /* Add padding inside the card */
-    margin: 10px; /* Add margin around the card */
-    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
-    /*box-shadow: 0px 5px 5px #7B64FC;*/
-    box-shadow: 1px 1px 5px 5px #7B64FC;
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px; 
+    box-sizing: border-box; 
+    /* ظل ناعم بينك بدل النيون القوي */
+    box-shadow: 0px 10px 30px rgba(255, 20, 147, 0.15); 
+    border: 1px solid #ffe6f2; /* حدود فاتحة جداً */
 }
 
+/* الكارت الداخلي اللي فيه الصورة */
 .card-team-2{
-
-    background-color: #010D16;
+    background-color: #f8f9fa; /* رمادي فاتح جداً جداً */
     border-radius: 20px;
-    width: 98%; /* Make the card fill the available width */
-    padding: 10px; /* Add padding inside the card */
-    margin: 10px; /* Add margin around the card */
-    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
-    box-shadow: inset 0 0 10px 2px rgba(123, 100, 252, 0.6),
-    inset 0 0 20px 4px rgba(123, 100, 252, 0.4),
-    inset 0 0 30px 6px rgba(123, 100, 252, 0.2);
-
+    width: 98%; 
+    padding: 10px; 
+    margin: 10px; 
+    box-sizing: border-box; 
+    /* شلت الـ Inset Shadow التقيل وحطيت بوردر بينك شيك */
+    border: 2px solid #FF1493;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .card-team li {
-
     list-style: outside;
-
 }
 
+/* صورة البروفايل */
 .card-team img {
     border-radius: 50%;
-    width: 20%; /* Make the image fill the available width */
-    box-shadow : 1px 1px 5px 5px #7B64FC;
+    width: 20%; 
+    /* ظل الصورة خليته بينك ناعم */
+    box-shadow : 0px 5px 15px rgba(255, 20, 147, 0.4);
+    border: 3px solid white;
 }
 
+/* العناوين الجانبية */
 .card-team h3 {
     font-weight: bolder;
-    color: #58E1FF;
+    color: #FF1493; /* العنوان بالبينك الأساسي */
 }
 
 .card-team h5 {
-    color: #01a8b4;
+    color: #D500F9; /* العنوان الفرعي بالموف */
 }
 
+/* الأيقونات */
 .team-icon-list li i {
-    color: #fff;
+    color: #555; /* الأيقونات رمادي */
     transition: all 0.1s ease-in-out;
 }
 
 .team-icon-list li i:hover {
-    color: #01a8b4;
+    color: #FF1493; /* لما تقفي عليها تقلب بينك */
     transform: scale(1.2);
 }
 
+/* النصوص والقوائم */
 #p-light-about {
-    color: #7B64FC;
+    color: #444444; /* الكلام العادي رمادي غامق للقراءة المريحة */
+    font-weight: 500;
 }

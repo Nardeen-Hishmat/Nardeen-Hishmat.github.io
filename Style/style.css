@@ -6,57 +6,61 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: "Predator";
+    font-family: "Predator", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 .circle-img {
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #FF1493; /* Pink Border */
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid #FF1493; /* حدود الصورة بينك */
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.2);
 }
 
 /* Customize scrollbar */
 body::-webkit-scrollbar {
-    width: 12px;
+    width: 12px; 
 }
 
-/* Track */
+/* Track (مسار السكرول) - فاتح */
 body::-webkit-scrollbar-track {
-    background: #0a000a; /* Dark Pinkish Black */
+    background: #f1f1f1; 
     border-radius: 15px;
 }
 
-/* Handle */
+/* Handle (مقبض السكرول) - بينك */
 body::-webkit-scrollbar-thumb {
-    background: #FF1493; /* Hot Pink */
+    background: #FF1493; 
     border-radius: 15px;
 }
 
 /* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
-    background: #D500F9; /* Magenta on hover */
+    background: #D500F9; 
 }
 
 body{
-    background-color: #050105; /* Very Dark Background */
+    /* أهم تغيير: الخلفية بيضاء ناعمة */
+    background-color: #fdfdfd; 
+    color: #333333; /* لون الكلام الأساسي رمادي غامق */
     overflow-x: hidden; 
 }
 
-/* Gradient Texts (Pink to Purple) */
+/* التدرجات اللونية للنصوص (خليناها أغمق عشان تبان على الأبيض) */
 .h-grad
 {     
-    background-image: linear-gradient(to right, #FF1493, #D500F9); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #FF1493, #9d00ff); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
     width: 1000px;
     font-size: 35px;
+    font-weight: bold;
 }
 
 .h-grad-2
 {
-    background-image: linear-gradient(to right, #FF1493, #D500F9, #9d00ff); 
+    background-image: linear-gradient(to right, #D500F9, #6a00ff); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
     width: 1000px;
@@ -65,9 +69,10 @@ body{
 
 .code-grad
 {
-    background-image: linear-gradient(to right, #FF1493, #D500F9);
+    background-image: linear-gradient(to right, #FF1493, #D500F9); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
+    font-weight: bold;
 }
 
 a
@@ -80,31 +85,31 @@ a
     font-weight: bolder;
   }
 .cap-l-l{
-    
-    background-image: linear-gradient(to right, #FF1493, #bc13fe); 
+    background-image: linear-gradient(to right, #FF1493, #9d00ff); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
 }
 
 #p-light
 {
-    color: #ff99cc; /* Soft Pink text */
+    color: #555555; /* رمادي متوسط */
 }
 
 /* header photo */ 
-
 .header-photo
 { 
     width: 100%;
     height: 400px;
-    background-image: url("../Images/main-bg.jpg"); /* Note: You might want to change this image later to a pink one */
+    /* يفضل تغيري صورة الخلفية لحاجة فاتحة، أو الكود ده هيعمل طبقة بيضاء فوقها */
+    background-image: url("../Images/main-bg.jpg"); 
     background-size: cover;
 }
 .gradient
 {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient( #050105cc,#050105 ); /* Dark Fade */
+    /* طبقة بيضاء شفافة عشان تغطي على الصورة الغامقة */
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.9), #fdfdfd); 
 }
 
 /* Nav bar */
@@ -125,21 +130,23 @@ header
 .logo img
 {
     max-width: 55%;
-    background-color: #1a0515;
+    background-color: #ffffff;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
+    border: 2px solid #FF1493;
 }   
 .logo img{
     transform: scale(1.1);
-    box-shadow : 1px 1px 15px 5px #FF1493; /* Pink Glow */
+    box-shadow : 0px 5px 15px rgba(255, 20, 147, 0.2);
 }
 
-/* nav list */
-
+/* nav list (القائمة العلوية) */
 .nav-list{
-    border: 3px solid #FF1493 ;
+    border: 2px solid #FF1493 ;
     border-radius: 25px;
-    background-image: linear-gradient(to left,#0a000a ,#1a0515);
+    /* خلفية القائمة بيضاء */
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 .nav-list ul
 {
@@ -149,37 +156,37 @@ header
 .nav-list a 
 {
     text-decoration: none;
-    color: #ffccff;
-    transition: all 0.1s ease-in-out;
+    color: #555555; /* روابط رمادي */
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
 }
 .nav-list li
 {
     transition: all 0.1s ease-in-out;
 }
 .nav-list li a:hover{
-    color: #FF1493 ;
-    text-shadow: 0 0 10px #FF1493;
+    color: #FF1493; /* لما تقفي عليها تقلب بينك */
 }
 
 
 /* button */
-
 .nav-btn  
 {
   text-decoration: none;
-  color: #000;
-  background-color: #FF1493; /* Pink Button */
+  color: #ffffff; /* كتابة بيضاء */
+  background-color: #FF1493; /* زرار بينك */
   padding: 6px 30px;
   border: none;
   border-radius: 30px;
   font-weight: bolder;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 0 10px #FF1493;
+  box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
 }
 
 .nav-btn:hover{
     background-color: #D500F9;
     color: white;
+    transform: translateY(-2px);
 }
 
 
@@ -198,81 +205,43 @@ header
 {
     font-weight: bolder;
     font-size: 70px;
-    text-shadow: 2px 2px #bc13fe;
+    text-shadow: 2px 2px 0px #ffe6f2;
 }
 
-/*header buttons */ 
-.head-fbtn 
+/* About Section */ 
+.about,.benifets
 {
-    color: white;
-    background: #FF1493;
-    padding: 10px 50px;
-    border-radius: 30px;
-    font-weight: bolder;
-    transition: all 0.2s ease-in-out;
-    border: 2px solid #FF1493;
-    box-shadow: 0 0 15px #FF1493;
-}
-.head-fbtn:hover
-{
-    color: #FF1493;
-    background-color: transparent;
-    border: #FF1493 2px solid;   
-}
-
-  .head-sbtn
-  { 
-    background-color: transparent;
-    border: #FF1493 solid 2px;
-    color: white; 
-    padding: 10px 50px;
-    border-radius: 30px;
-    font-weight: bolder;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .head-sbtn:hover {
-    color: white;
-    background-color: #FF1493;
-    box-shadow: 0 0 15px #FF1493;
-  }
-
-  /* About */ 
-  
-  .about,.benifets
-  {
     width: 100%;
     height: 600px;
-    background-color: #050105;
-  }
+    background-color: #fdfdfd; /* خلفية بيضاء */
+}
 
-  .internal-box
-  {
+.internal-box
+{
     height: 95%;
-    background-color: #1a0515; /* Dark Purple bg */
+    background-color: #ffffff; /* كارت أبيض */
     border-radius: 15px;
     transition: all 0.1s ease-in-out;
-    color: white;
-    box-shadow: 1px 1px 10px 2px #FF1493; /* Pink Box Shadow */
-    border: 1px solid #bc13fe;
-  }
+    color: #333;
+    box-shadow: 0px 10px 30px rgba(255, 20, 147, 0.1); /* ظل خفيف */
+    border: 1px solid #ffe6f2;
+}
 
-  .internal-box > h1{
+.internal-box > h1{
     font-weight: bolder;
     font-size: 45px;
-    color: #ff99cc;
-    text-shadow: 0 0 5px #D500F9;
-  }
+    color: #333;
+}
 
-  /*About img **/ 
-  .about-img img
-  {
+/* About img */ 
+.about-img img
+{
     object-fit: cover;
     max-width: 50%;
-    filter: drop-shadow(0 0 10px #FF1493);
-  }
+    filter: drop-shadow(0 5px 15px rgba(255,20,147,0.3));
+}
 
-  /* benift */
+/* benift */
 .benf-cont
 {
     height: 70%;
@@ -286,6 +255,7 @@ header
 .ben-list ul li
 {
     margin-bottom: 0;
+    color: #555;
 }
 
 
@@ -293,38 +263,38 @@ header
 .cards{
     width: 100%;
     height: 850px;
-    box-shadow: 0px -5px 20px #FF1493; /* Upper Glow */
 }
 .card-cards
 {
-    background-color:#16051c;
+    background-color:#ffffff;
     border-radius: 10px;
     height: 15em;
     transition: all 0.2s ease-in-out;
-    border: 1px solid #38004e;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 .card-cards:hover
 {
     padding: 20px;
-    box-shadow: 0px 0px 15px #FF1493;
+    box-shadow: 0px 10px 30px rgba(255, 20, 147, 0.2);
     border: 1px solid #FF1493;
 }
 
 .card-cards > h2
 {
     font-weight: 700;
-    color: #ffccff;
+    color: #333;
 }
 
 
 /* footer */ 
-
 footer{
-    border-top:#FF1493 2px solid;
+    border-top: 2px solid #FF1493;
     height: 250px;
     width: 100%;
-    background-image: linear-gradient(to left, #000000, #1a0515, #240024);
-    box-shadow: 0px -5px 20px #FF1493;
+    /* خلفية الفوتر بيضاء */
+    background-color: #ffffff; 
+    box-shadow: 0px -5px 20px rgba(0,0,0,0.05);
 }
 
 footer li
@@ -333,25 +303,25 @@ footer li
 }
 footer li a 
 {
-    color: #ffccff;
+    color: #555555; /* روابط الفوتر رمادي */
     transition: all 0.2s ease-in-out;
+    font-weight: 500;
 }
 footer li a:hover
 {
     color: #FF1493;
-    text-shadow: 0 0 10px #FF1493;
 }
 footer svg 
 {
     height: 30px;
     border-radius: 100%;
     transition: all 0.2s ease-in-out;
-    fill: #ffccff;
+    fill: #555; /* لون الأيقونات رمادي */
 }
 footer svg:hover 
 {
     transform: scale(1.2);
-    fill: #FF1493;
+    fill: #FF1493; /* تقلب بينك عند اللمس */
 }
 
 .links-list

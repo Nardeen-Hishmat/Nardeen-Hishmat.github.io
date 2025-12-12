@@ -1,46 +1,52 @@
 /* Flash animation */
 
+/* الانيميشن الأساسي - خليته يقلب هوت بينك */
 @keyframes flash {
     0%, 50%, 100% {
-        color: #bcbcbcd5;
+        color: #555555; /* رمادي غامق عشان يبان على الأبيض */
     }
     25%, 75% {
-        color: #7B64FC;
+        color: #FF1493; /* Hot Pink */
     }
 }
 
+/* خليته يقلب موف */
 @keyframes flash-Acer {
     0%, 50%, 100% {
-        color: #bcbcbcd5;
+        color: #555555;
     }
     25%, 75% {
-        color: #A600E7;
+        color: #D500F9; /* Magenta/Purple */
     }
 }
 
+/* خليته يقلب نبيتي/بينك غامق */
 @keyframes flash-Wireless {
     0%, 50%, 100% {
-        color: #bcbcbcd5;
+        color: #555555;
     }
     25%, 75% {
-        color: #a4133c;
+        color: #C71585; /* Medium Violet Red */
     }
 }
 
+/* خليته يقلب بنفسجي */
 @keyframes flash-Dark {
     0%, 50%, 100% {
-        color: #bcbcbcd5;
+        color: #555555;
     }
     25%, 75% {
-        color: #0466c8;
+        color: #9400D3; /* Dark Violet */
     }
 }
+
+/* خليته يقلب بينك فاتح */
 @keyframes flash-ARM {
     0%, 50%, 100% {
-        color: #bcbcbcd5;
+        color: #555555;
     }
     25%, 75% {
-        color: #4ad66d;
+        color: #FF69B4; /* Hot Pink Lighter */
     }
 }
 
@@ -60,5 +66,3 @@
 .flashing-ARM {
     animation: flash-ARM 5s  alternate infinite;
 }
-
-

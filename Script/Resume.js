@@ -1,42 +1,37 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log('Resume page loaded');
-    // Your JavaScript code here
 });
 
 window.onload = function() {
+    // إضافة الصورة بجانب العنوان
     var title = document.getElementById("pageTitle");
-    var img = document.createElement("img");
-    img.src = "./Images/00xWolf-circle.png";
+    /* var img = document.createElement("img");
+    img.src = "https://github.com/Nardeen-Hishmat.png"; 
     img.className = "page-icon";
-    title.insertBefore(img, title.firstChild);
+    if(title) title.insertBefore(img, title.firstChild); */
 
-    // Initialize Typed.js for the auto-type effect
-    var options = {
-        strings: ["Resume"], // Add your desired texts here
-        typeSpeed: 120,
-        backSpeed: 120,
+    // الكتابة المتحركة
+    var typed = new Typed(".auto-type-resume", {
+        strings: ["My Resume", "Education", "Experience", "Certifications"], 
+        typeSpeed: 100,
+        backSpeed: 50,
         loop: true
-    };
-
-    var typed = new Typed(".auto-type-resume", options);
+    });
 };
 
-// JavaScript to scroll to section
+// Scroll Logic
 document.addEventListener("DOMContentLoaded", function() {
     const scrollLinks = document.querySelectorAll('.go-commun');
     scrollLinks.forEach(function(scrollLink) {
         scrollLink.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default anchor behavior
-
+            event.preventDefault();
             const targetSections = document.querySelectorAll(".icon-cy");
-
             targetSections.forEach(targetSection => {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
                 targetSection.classList.add('flashing');
-
                 setTimeout(() => {
                     targetSection.classList.remove('flashing');
-                }, 10000);
+                }, 5000);
             });
         });
     });
