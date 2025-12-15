@@ -354,11 +354,13 @@ footer svg:hover
         /* display: flex !important; flex-direction: column; height: auto; */
     }
 
-    .header-photo {
-        height: auto !important;
-        min-height: 100vh; /* تخلي الخلفية تغطي الشاشة كلها */
-        background-position: center;
-    }
+   .header-photo { 
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    background-color: #fdfdfd !important; /* إجبار اللون الأبيض */
+    background-image: none !important;    /* إجبار إلغاء الصورة */
+}
 
     /* 3. النصوص الكبيرة (Hero Text) */
     .header-team h1 {
