@@ -328,3 +328,118 @@ footer svg:hover
 {
     margin-right: 100px;
 }
+/* =========================================
+   Mobile Responsive Fixes (أكواد الموبايل)
+   ========================================= */
+@media screen and (max-width: 768px) {
+
+    /* 1. تظبيط الأحجام العامة */
+    .container, .row, .col-*, .header-team h1, .h-grad, .h-grad-2 {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* 2. الهيدر والنافيجيشن (القائمة) */
+    header {
+        height: auto !important;
+        padding-bottom: 20px;
+    }
+    
+    .nav-list {
+        display: none !important; /* إخفاء القائمة مؤقتاً في الموبايل أو تحويلها لقائمة منسدلة مستقبلاً */
+        /* لو عاوزاها تظهر بس تحت بعض: */
+        /* display: flex !important; flex-direction: column; height: auto; */
+    }
+
+    .header-photo {
+        height: auto !important;
+        min-height: 100vh; /* تخلي الخلفية تغطي الشاشة كلها */
+        background-position: center;
+    }
+
+    /* 3. النصوص الكبيرة (Hero Text) */
+    .header-team h1 {
+        font-size: 2rem !important; /* تصغير الخط الكبير */
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .header-text h1 {
+        font-size: 40px !important;
+    }
+
+    /* 4. كروت المعلومات (About & Skills cards) */
+    .about, .benifets, .cards-team, .Download {
+        height: auto !important; /* إلغاء الطول الثابت */
+        padding-bottom: 50px;
+    }
+
+    .internal-box, .card-team, .content-download {
+        width: 100% !important;
+        height: auto !important;
+        margin: 10px 0 !important;
+    }
+
+    /* ترتيب العناصر فوق بعضها بدل جنب بعض */
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-6, .col-5, .col-4, .col-2, .col-7, .col-3, .col-8 {
+        width: 100% !important;
+        display: block;
+    }
+
+    /* 5. إصلاح الصور */
+    .benf-img img, .about-img img, .circle-img {
+        margin: 20px auto !important;
+        display: block;
+        max-width: 70% !important;
+    }
+
+    .logo-back {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* 6. إصلاح الفوتر (Footer) */
+    footer {
+        height: auto !important;
+        padding: 20px 0;
+    }
+    
+    .links-list {
+        margin-right: 0 !important;
+        justify-content: center !important;
+    }
+    
+    footer .row {
+        text-align: center;
+    }
+
+    /* 7. إصلاح السكيلز (Skills Fix)  */
+    .skill-item {
+        flex-direction: column; /* الأيقونة تنزل تحت الكلام */
+        text-align: center;
+    }
+    
+    .skill-icons i {
+        margin: 10px 5px !important;
+    }
+    
+    /* 8. إصلاح المشاريع (Projects) */
+    .Download-button {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+    
+    .content-download {
+        position: relative !important; /* عشان ما يغطيش على الزراير */
+        width: 100% !important;
+        left: 0 !important;
+    }
+}
