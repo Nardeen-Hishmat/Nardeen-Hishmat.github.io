@@ -237,16 +237,6 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
         align-items: center;
     }
 
-    /* ✅ تصغير صورة الهيدر جدًا */
-    .header-text img {
-        width: 80px !important;      /* ← هنا التصغير */
-        height: 80px !important;
-        margin: 10px auto 15px auto !important;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 2px solid #FF1493;
-        display: block;
-    }
 
     /* النص */
     .header-text h1,
@@ -304,13 +294,6 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
     /* صور تانية */
     .benf-img img,
     .about-img img,
-    .circle-img,
-    .logo img {
-        margin: 15px auto !important;
-        display: block;
-        max-width: 60% !important;
-    }
-
     .logo-back {
         text-align: center;
         margin-bottom: 10px;
@@ -337,5 +320,23 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
         margin: 10px auto !important;
         padding: 15px !important;
         height: auto !important;
+    }
+    .header-team .circle-img {
+        width: 72px !important;
+        height: 72px !important;
+        max-width: 72px !important;
+        max-height: 72px !important;
+        margin: 10px auto 15px auto !important;
+        display: block;
+        border-radius: 50%;
+        transform: none !important;   /* يقتل scale */
+    }
+
+    /* لو الصورة <img> */
+    .header-team .circle-img img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        transform: none !important;
     }
 }
