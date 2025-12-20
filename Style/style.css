@@ -217,9 +217,8 @@ footer svg {
 footer svg:hover { transform: scale(1.2); fill: #FF1493; }
 .links-list { margin-right: 100px; }
 
-
 /* =======================================================
-   MOBILE FIXES (الحل الجذري لمشكلة اختفاء الكلام)
+   MOBILE FIXES (تعديلات الموبايل النهائية)
    ======================================================= */
 @media screen and (max-width: 768px) {
     
@@ -228,23 +227,48 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
         width: 100% !important;
     }
 
-    /* إصلاح النصوص: إلغاء التدرج اللوني + ضبط العرض */
-    .h-grad, .h-grad-2, .cap-l-l, .code-grad, .header-text h1 {
-        width: 100% !important;
-        max-width: 100% !important;
-        font-size: 24px !important; /* تصغير الخط */
-        line-height: 1.4 !important;
-        text-align: center !important;
-        white-space: normal !important;
-        word-wrap: break-word !important;
-        
-        /* هنا السر: إلغاء التدرج واستخدام لون ثابت للموبايل عشان الكلام يبان كله */
-        background-image: none !important;
-        -webkit-text-fill-color: #FF1493 !important; /* لون بينك ثابت */
-        color: #FF1493 !important;
+    /* 1. أهم تعديل: فتح ارتفاع الهيدر عشان الكلام يبان */
+    .header-team {
+        height: auto !important; /* ده اللي هيحل المشكلة */
+        min-height: 400px;       /* يضمن مساحة كافية */
+        padding-bottom: 50px;    /* مساحة تحتية عشان الكلام مليزقش في اللي بعده */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* باقي التعديلات */
+    /* 2. تظبيط الصورة عشان متغطيش على الكلام */
+    .header-text img {
+        margin-top: 20px !important;
+        margin-bottom: 30px !important; /* مسافة كبيرة تحت الصورة */
+        width: 140px; 
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #FF1493;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 3. تظبيط الكلام نفسه */
+    .header-text h1, .h-grad, .typed-cursor {
+        font-size: 22px !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+        
+        /* إلغاء التدرج في الموبايل عشان الكلام يبقى واضح */
+        background-image: none !important;
+        -webkit-text-fill-color: #FF1493 !important;
+        color: #FF1493 !important;
+        position: relative;
+        z-index: 10; /* يضمن إن الكلام فوق أي حاجة تانية */
+    }
+
+    /* باقي التعديلات العامة */
     .container, .row, .col-*, .header-team h1 {
         width: 100% !important;
         max-width: 100% !important;
@@ -265,7 +289,7 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
         max-width: 60% !important;
     }
     
-    .logo-back { text-align: center; }
+    .logo-back { text-align: center; margin-bottom: 10px; }
     .links-list { margin-right: 0 !important; justify-content: center !important; }
     footer .row { text-align: center; }
     
@@ -280,20 +304,6 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
         width: 95% !important;
         margin: 10px auto !important;
         padding: 15px !important;
+        height: auto !important;
     }
-    
-    /* تصغير الخط في القوائم */
-    .ben-list li { font-size: 14px !important; }
-/* إصلاح مسافة الصورة في الهيدر */
-.header-text img {
-    margin-bottom: 30px !important; /* بتعمل مسافة تحت الصورة */
-    width: 150px; /* بنظبط حجم الصورة عشان متبقاش عملاقة في الموبايل */
-    height: 150px;
-    object-fit: cover;
-}
-
-/* تظبيط بسيط للاسم عشان يبعد شوية كمان */
-.header-text p {
-    margin-top: 10px;
-}
 }
