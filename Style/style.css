@@ -217,61 +217,88 @@ footer svg {
 footer svg:hover { transform: scale(1.2); fill: #FF1493; }
 .links-list { margin-right: 100px; }
 
+/* =======================================================
+   MOBILE HEADER FIX (FINAL & CLEAN)
+   ======================================================= */
 @media screen and (max-width: 768px) {
-    
-    /* 1. إجبار الكلام (Eng. Nardeen) إنه ينزل لتحت */
-    .header-text p {
-        margin-top: 60px !important;  /* زقة كبيرة لتحت */
-        padding-top: 20px !important; /* مسافة أمان إضافية */
-        display: block !important;
-        position: relative;
-        clear: both; /* يمنع أي تداخل مع عناصر عايمة */
-        color: #FF1493 !important;
-        font-size: 18px !important;
+
+    /* الهيدر كله */
+    .header-team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto !important;
+        min-height: 520px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
     }
 
-    /* 2. تأمين الصورة (لو موجودة جوه الـ header-text) */
+    /* الصورة */
     .header-text img {
-        margin-bottom: 20px !important;
-        display: block !important;
         width: 140px;
         height: 140px;
         object-fit: cover;
         border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+        position: static !important;
     }
 
-    /* 3. باقي تظبيطات الموبايل الضرورية */
-    .header-team {
-        height: auto !important;
-        min-height: 500px !important; /* زودت الطول عشان يستوعب المسافات الجديدة */
-        padding-bottom: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .h-grad, .h-grad-2, .header-text h1 {
+    /* العنوان الرئيسي */
+    .header-text h1 {
         font-size: 24px !important;
-        line-height: 1.5 !important;
-        text-align: center !important;
-        width: 95% !important;
-        margin: 10px auto !important;
+        line-height: 1.4;
+        margin: 10px 0;
+        text-align: center;
         background-image: none !important;
         color: #FF1493 !important;
         -webkit-text-fill-color: #FF1493 !important;
     }
 
-    .container, .row, .col-* { width: 100% !important; max-width: 100% !important; }
-    .row { display: flex; flex-direction: column; }
-    .nav-list { display: none !important; }
-    .col-6, .col-4, .col-3, .col-8 { width: 100% !important; display: block; padding: 0 10px !important; }
-    
-    .benf-img img, .about-img img {
-        margin: 20px auto !important;
+    /* الاسم أو Eng. Nardeen */
+    .header-text p {
+        margin: 5px 0 15px 0 !important;
+        padding: 0 !important;
+        font-size: 18px;
+        position: static !important;
+        text-align: center;
+        color: #FF1493 !important;
+    }
+
+    /* الجريد / الأعمدة */
+    .container,
+    .row {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-6,
+    .col-4,
+    .col-3,
+    .col-8 {
+        width: 100% !important;
+        padding: 0 12px !important;
         display: block;
+    }
+
+    /* إخفاء الناف بار في الموبايل */
+    .nav-list {
+        display: none !important;
+    }
+
+    /* أي صور إضافية */
+    .benf-img img,
+    .about-img img {
+        display: block;
+        margin: 20px auto;
         max-width: 70% !important;
     }
 }
