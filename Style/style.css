@@ -3,7 +3,7 @@
     src: url(../Fonts/Squares-Regular.otf);
 }
 
-*{
+* {
     padding: 0px;
     margin: 0px;
     font-family: "Predator", sans-serif;
@@ -14,52 +14,33 @@
 .circle-img {
     border-radius: 50%; 
     object-fit: cover; 
-    border: 3px solid #FF1493; /* حدود الصورة بينك */
+    border: 3px solid #FF1493; 
     box-shadow: 0 5px 15px rgba(255, 20, 147, 0.2);
 }
 
-/* Customize scrollbar */
-body::-webkit-scrollbar {
-    width: 12px; 
-}
+/* Scrollbar */
+body::-webkit-scrollbar { width: 12px; }
+body::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 15px; }
+body::-webkit-scrollbar-thumb { background: #FF1493; border-radius: 15px; }
+body::-webkit-scrollbar-thumb:hover { background: #D500F9; }
 
-/* Track (مسار السكرول) - فاتح */
-body::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 15px;
-}
-
-/* Handle (مقبض السكرول) - بينك */
-body::-webkit-scrollbar-thumb {
-    background: #FF1493; 
-    border-radius: 15px;
-}
-
-/* Handle on hover */
-body::-webkit-scrollbar-thumb:hover {
-    background: #D500F9; 
-}
-
-body{
-    /* الخلفية بيضاء ناعمة */
+body {
     background-color: #fdfdfd; 
     color: #333333; 
     overflow-x: hidden; 
 }
 
-/* التدرجات اللونية للنصوص */
-.h-grad
-{     
+/* Gradient Texts (Desktop) */
+.h-grad {     
     background-image: linear-gradient(to right, #FF1493, #9d00ff); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
-    width: 1000px; /* سيتم تعديله في الموبايل */
+    width: 1000px;
     font-size: 35px;
     font-weight: bold;
 }
 
-.h-grad-2
-{
+.h-grad-2 {
     background-image: linear-gradient(to right, #D500F9, #6a00ff); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
@@ -67,8 +48,7 @@ body{
     font-size: 25px;
 }
 
-.code-grad
-{
+.code-grad {
     background-image: linear-gradient(to right, #FF1493, #D500F9); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
@@ -76,9 +56,7 @@ body{
 }
 
 a { text-decoration: none; } 
-
 .cap-l { font-weight: bolder; }
-
 .cap-l-l {
     background-image: linear-gradient(to right, #FF1493, #9d00ff); 
     -webkit-background-clip: text; 
@@ -87,32 +65,27 @@ a { text-decoration: none; }
 
 #p-light { color: #555555; }
 
-/* header photo */ 
-.header-photo
-{ 
+/* Header */ 
+.header-photo { 
     width: 100%;
-    /* تم تحويل الطول لـ auto ليتناسب مع المحتوى */
     height: auto;
     min-height: 400px; 
     background-size: cover;
     background-position: center;
+    background-color: #fdfdfd;
 }
 
-.gradient
-{
+.gradient {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, rgba(255,255,255,0.9), #fdfdfd); 
 }
 
-/* Nav bar */
 header { width: 100%; height: 120px; }
 
-/* nav logo */ 
+/* Logo */ 
 .logo-back { width: 100%; height: 100%; max-width: 80%; }
-
-.logo img
-{
+.logo img {
     max-width: 55%;
     background-color: #ffffff;
     border-radius: 50%;
@@ -122,17 +95,15 @@ header { width: 100%; height: 120px; }
     box-shadow : 0px 5px 15px rgba(255, 20, 147, 0.2);
 }   
 
-/* nav list (القائمة العلوية) */
-.nav-list{
-    border: 2px solid #FF1493 ;
+/* Nav List */
+.nav-list {
+    border: 2px solid #FF1493;
     border-radius: 25px;
     background-color: #ffffff;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 .nav-list ul { list-style: none; }
-
-.nav-list a 
-{
+.nav-list a {
     text-decoration: none;
     color: #555555; 
     font-weight: bold;
@@ -141,9 +112,8 @@ header { width: 100%; height: 120px; }
 .nav-list li { transition: all 0.1s ease-in-out; }
 .nav-list li a:hover { color: #FF1493; }
 
-/* button */
-.nav-btn  
-{
+/* Buttons */
+.nav-btn {
   text-decoration: none;
   color: #ffffff; 
   background-color: #FF1493; 
@@ -154,40 +124,34 @@ header { width: 100%; height: 120px; }
   transition: all 0.2s ease-in-out;
   box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
 }
-
-.nav-btn:hover{
+.nav-btn:hover {
     background-color: #D500F9;
     color: white;
     transform: translateY(-2px);
 }
 
-/* header content */
-.header-contet{ width: 100%; }
-
-.header-text > p 
-{
+/* Header Text */
+.header-contet { width: 100%; }
+.header-text > p {
     color: #FF1493;
     font-size: 18px;
     font-weight: bolder;
 }
-.header-text h1
-{
+.header-text h1 {
     font-weight: bolder;
     font-size: 70px;
     text-shadow: 2px 2px 0px #ffe6f2;
 }
 
 /* Sections */ 
-.about, .benifets
-{
+.about, .benifets {
     width: 100%;
-    height: auto; /* مهم: الطول أوتوماتيك */
+    height: auto;
     padding-bottom: 50px;
     background-color: #fdfdfd; 
 }
 
-.internal-box
-{
+.internal-box {
     height: auto;
     background-color: #ffffff; 
     border-radius: 15px;
@@ -196,7 +160,6 @@ header { width: 100%; height: 120px; }
     border: 1px solid #ffe6f2;
     padding: 20px;
 }
-
 .internal-box > h1 {
     font-weight: bolder;
     font-size: 45px;
@@ -210,12 +173,7 @@ header { width: 100%; height: 120px; }
 }
 
 .benf-cont { height: auto; }
-
-.benf-img img {
-    max-width: 50%;
-    margin-left: 0; /* إصلاح المارجن */
-}
-
+.benf-img img { max-width: 50%; margin-left: 0; }
 .ben-list ul li { margin-bottom: 0; color: #555; }
 
 /* Cards */
@@ -235,7 +193,7 @@ header { width: 100%; height: 120px; }
 }
 .card-cards > h2 { font-weight: 700; color: #333; }
 
-/* footer */ 
+/* Footer */ 
 footer {
     border-top: 2px solid #FF1493;
     height: auto;
@@ -259,104 +217,71 @@ footer svg {
 footer svg:hover { transform: scale(1.2); fill: #FF1493; }
 .links-list { margin-right: 100px; }
 
-/* =========================================
-   MOBILE RESPONSIVE FIXES (تصليح الموبايل النهائي)
-   ========================================= */
-@media screen and (max-width: 768px) {
 
-    /* 1. منع الخروج عن الشاشة تماماً */
+/* =======================================================
+   MOBILE FIXES (الحل الجذري لمشكلة اختفاء الكلام)
+   ======================================================= */
+@media screen and (max-width: 768px) {
+    
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
-        position: relative;
     }
 
-    /* 2. تصغير العناوين العملاقة (أهم إصلاح) */
-    /* المشكلة كانت إن الخط عريض، لازم نصغره لـ 22px */
-    .header-text h1, .typed-os, .h-grad, .h-grad-2 {
-        font-size: 22px !important; 
-        line-height: 1.5 !important;
+    /* إصلاح النصوص: إلغاء التدرج اللوني + ضبط العرض */
+    .h-grad, .h-grad-2, .cap-l-l, .code-grad, .header-text h1 {
         width: 100% !important;
-        white-space: normal !important; /* يسمح للكلام ينزل سطر جديد */
-        word-wrap: break-word !important; /* يكسر الكلمة لو طويلة */
+        max-width: 100% !important;
+        font-size: 24px !important; /* تصغير الخط */
+        line-height: 1.4 !important;
         text-align: center !important;
-        margin: 10px 0 !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        
+        /* هنا السر: إلغاء التدرج واستخدام لون ثابت للموبايل عشان الكلام يبان كله */
+        background-image: none !important;
+        -webkit-text-fill-color: #FF1493 !important; /* لون بينك ثابت */
+        color: #FF1493 !important;
     }
 
-    /* تصغير الاسم (Eng. Nardeen) */
-    .header-text > p {
-        font-size: 14px !important;
-        margin-bottom: 5px !important;
-    }
-
-    /* 3. تظبيط كارت "About" (عشان الكلام مايكونش مزنوق) */
-    .internal-box, .benf-cont {
-        width: 92% !important; /* يوسع الكارت */
-        margin: 10px auto !important;
-        padding: 15px !important; /* يقلل الهوامش الداخلية */
-        height: auto !important;
-    }
-
-    /* 4. تظبيط القائمة النقطية (البيانات الشخصية) */
-    .ben-list ul {
-        padding-left: 0 !important; /* يلغي المسافة اللي على الشمال */
-        list-style-position: inside !important;
-    }
-    
-    .ben-list li {
-        font-size: 14px !important; /* تصغير خط البيانات */
-        word-break: break-word;
-    }
-
-    /* 5. تظبيط الصورة الشخصية */
-    .circle-img {
-        width: 140px !important; 
-        height: 140px !important;
-        margin: 15px auto !important;
-        display: block;
-        border-width: 2px !important;
-    }
-    
-    /* 6. تظبيط الترتيب (العمود يبقى سطر واحد) */
-    .row {
-        display: flex;
-        flex-direction: column;
-        margin: 0 !important;
+    /* باقي التعديلات */
+    .container, .row, .col-*, .header-team h1 {
         width: 100% !important;
+        max-width: 100% !important;
     }
 
+    .row { display: flex; flex-direction: column; }
     .col-6, .col-5, .col-4, .col-3, .col-2, .col-8, .col-md-4 {
         width: 100% !important;
-        padding: 0 5px !important;
         display: block;
+        padding: 0 10px !important;
     }
 
-    /* 7. إخفاء القائمة العلوية مؤقتاً */
     .nav-list { display: none !important; }
     
-    /* زرار الريزوميه */
+    .benf-img img, .about-img img, .circle-img, .logo img {
+        margin: 15px auto !important;
+        display: block;
+        max-width: 60% !important;
+    }
+    
+    .logo-back { text-align: center; }
+    .links-list { margin-right: 0 !important; justify-content: center !important; }
+    footer .row { text-align: center; }
+    
     .nav-btn {
         display: block;
-        width: 70%;
+        width: 80%;
         margin: 10px auto;
-        font-size: 14px !important;
-        padding: 8px 0 !important;
-    }
-
-    /* 8. تظبيط الهيدر */
-    .header-photo {
-        height: auto !important;
-        min-height: 100vh; /* يملأ الشاشة */
-        background-color: #fdfdfd !important;
-        padding-top: 20px;
+        text-align: center;
     }
     
-    .logo-back { margin-bottom: 20px; }
-    
-    /* 9. تظبيط الفوتر */
-    footer {
-        height: auto !important;
-        padding: 20px 0;
+    .internal-box {
+        width: 95% !important;
+        margin: 10px auto !important;
+        padding: 15px !important;
     }
-    .links-list { margin-right: 0 !important; justify-content: center !important; }
+    
+    /* تصغير الخط في القوائم */
+    .ben-list li { font-size: 14px !important; }
 }
