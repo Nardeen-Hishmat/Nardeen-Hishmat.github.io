@@ -41,19 +41,19 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 body{
-    /* أهم تغيير: الخلفية بيضاء ناعمة */
+    /* الخلفية بيضاء ناعمة */
     background-color: #fdfdfd; 
-    color: #333333; /* لون الكلام الأساسي رمادي غامق */
+    color: #333333; 
     overflow-x: hidden; 
 }
 
-/* التدرجات اللونية للنصوص (خليناها أغمق عشان تبان على الأبيض) */
+/* التدرجات اللونية للنصوص */
 .h-grad
 {     
     background-image: linear-gradient(to right, #FF1493, #9d00ff); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
-    width: 1000px;
+    width: 1000px; /* سيتم تعديله في الموبايل */
     font-size: 35px;
     font-weight: bold;
 }
@@ -75,57 +75,41 @@ body{
     font-weight: bold;
 }
 
-a
-{
-    text-decoration: none;
-} 
+a { text-decoration: none; } 
 
-.cap-l 
-  {
-    font-weight: bolder;
-  }
-.cap-l-l{
+.cap-l { font-weight: bolder; }
+
+.cap-l-l {
     background-image: linear-gradient(to right, #FF1493, #9d00ff); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
 }
 
-#p-light
-{
-    color: #555555; /* رمادي متوسط */
-}
+#p-light { color: #555555; }
 
 /* header photo */ 
 .header-photo
 { 
     width: 100%;
-    height: 400px;
-    /* يفضل تغيري صورة الخلفية لحاجة فاتحة، أو الكود ده هيعمل طبقة بيضاء فوقها */
-    /* background-image: url("../Images/main-bg.jpg"); */
+    /* تم تحويل الطول لـ auto ليتناسب مع المحتوى */
+    height: auto;
+    min-height: 400px; 
     background-size: cover;
+    background-position: center;
 }
+
 .gradient
 {
     width: 100%;
     height: 100%;
-    /* طبقة بيضاء شفافة عشان تغطي على الصورة الغامقة */
     background-image: linear-gradient(to bottom, rgba(255,255,255,0.9), #fdfdfd); 
 }
 
 /* Nav bar */
-header
-{    
-    width: 100%;
-    height: 120px;
-}
+header { width: 100%; height: 120px; }
 
 /* nav logo */ 
-.logo-back
-{
-    width: 100%;
-    height: 100%;
-    max-width: 80%;
-}
+.logo-back { width: 100%; height: 100%; max-width: 80%; }
 
 .logo img
 {
@@ -134,47 +118,35 @@ header
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
     border: 2px solid #FF1493;
-}   
-.logo img{
     transform: scale(1.1);
     box-shadow : 0px 5px 15px rgba(255, 20, 147, 0.2);
-}
+}   
 
 /* nav list (القائمة العلوية) */
 .nav-list{
     border: 2px solid #FF1493 ;
     border-radius: 25px;
-    /* خلفية القائمة بيضاء */
     background-color: #ffffff;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
-.nav-list ul
-{
-    list-style: none;
-}
+.nav-list ul { list-style: none; }
 
 .nav-list a 
 {
     text-decoration: none;
-    color: #555555; /* روابط رمادي */
+    color: #555555; 
     font-weight: bold;
     transition: all 0.2s ease-in-out;
 }
-.nav-list li
-{
-    transition: all 0.1s ease-in-out;
-}
-.nav-list li a:hover{
-    color: #FF1493; /* لما تقفي عليها تقلب بينك */
-}
-
+.nav-list li { transition: all 0.1s ease-in-out; }
+.nav-list li a:hover { color: #FF1493; }
 
 /* button */
 .nav-btn  
 {
   text-decoration: none;
-  color: #ffffff; /* كتابة بيضاء */
-  background-color: #FF1493; /* زرار بينك */
+  color: #ffffff; 
+  background-color: #FF1493; 
   padding: 6px 30px;
   border: none;
   border-radius: 30px;
@@ -189,11 +161,8 @@ header
     transform: translateY(-2px);
 }
 
-
-/* header*/
-.header-contet{
-    width: 100%;
-}
+/* header content */
+.header-contet{ width: 100%; }
 
 .header-text > p 
 {
@@ -208,64 +177,50 @@ header
     text-shadow: 2px 2px 0px #ffe6f2;
 }
 
-/* About Section */ 
-.about,.benifets
+/* Sections */ 
+.about, .benifets
 {
     width: 100%;
-    height: 600px;
-    background-color: #fdfdfd; /* خلفية بيضاء */
+    height: auto; /* مهم: الطول أوتوماتيك */
+    padding-bottom: 50px;
+    background-color: #fdfdfd; 
 }
 
 .internal-box
 {
-    height: 95%;
-    background-color: #ffffff; /* كارت أبيض */
+    height: auto;
+    background-color: #ffffff; 
     border-radius: 15px;
-    transition: all 0.1s ease-in-out;
     color: #333;
-    box-shadow: 0px 10px 30px rgba(255, 20, 147, 0.1); /* ظل خفيف */
+    box-shadow: 0px 10px 30px rgba(255, 20, 147, 0.1); 
     border: 1px solid #ffe6f2;
+    padding: 20px;
 }
 
-.internal-box > h1{
+.internal-box > h1 {
     font-weight: bolder;
     font-size: 45px;
     color: #333;
 }
 
-/* About img */ 
-.about-img img
-{
+.about-img img {
     object-fit: cover;
     max-width: 50%;
     filter: drop-shadow(0 5px 15px rgba(255,20,147,0.3));
 }
 
-/* benift */
-.benf-cont
-{
-    height: 70%;
-}
+.benf-cont { height: auto; }
 
-.benf-img img
-{
+.benf-img img {
     max-width: 50%;
-    margin-left: 150px;
-}
-.ben-list ul li
-{
-    margin-bottom: 0;
-    color: #555;
+    margin-left: 0; /* إصلاح المارجن */
 }
 
+.ben-list ul li { margin-bottom: 0; color: #555; }
 
-/*Cards */
-.cards{
-    width: 100%;
-    height: 850px;
-}
-.card-cards
-{
+/* Cards */
+.cards { width: 100%; height: auto; }
+.card-cards {
     background-color:#ffffff;
     border-radius: 10px;
     height: 15em;
@@ -273,175 +228,96 @@ header
     border: 1px solid #eee;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
-.card-cards:hover
-{
+.card-cards:hover {
     padding: 20px;
     box-shadow: 0px 10px 30px rgba(255, 20, 147, 0.2);
     border: 1px solid #FF1493;
 }
-
-.card-cards > h2
-{
-    font-weight: 700;
-    color: #333;
-}
-
+.card-cards > h2 { font-weight: 700; color: #333; }
 
 /* footer */ 
-footer{
+footer {
     border-top: 2px solid #FF1493;
-    height: 250px;
+    height: auto;
     width: 100%;
-    /* خلفية الفوتر بيضاء */
     background-color: #ffffff; 
     box-shadow: 0px -5px 20px rgba(0,0,0,0.05);
+    padding: 20px 0;
 }
-
-footer li
-{
-    list-style: none;   
-}
-footer li a 
-{
-    color: #555555; /* روابط الفوتر رمادي */
+footer li { list-style: none; }
+footer li a {
+    color: #555555; 
     transition: all 0.2s ease-in-out;
     font-weight: 500;
 }
-footer li a:hover
-{
-    color: #FF1493;
-}
-footer svg 
-{
+footer li a:hover { color: #FF1493; }
+footer svg {
     height: 30px;
-    border-radius: 100%;
+    fill: #555; 
     transition: all 0.2s ease-in-out;
-    fill: #555; /* لون الأيقونات رمادي */
 }
-footer svg:hover 
-{
-    transform: scale(1.2);
-    fill: #FF1493; /* تقلب بينك عند اللمس */
-}
+footer svg:hover { transform: scale(1.2); fill: #FF1493; }
+.links-list { margin-right: 100px; }
 
-.links-list
-{
-    margin-right: 100px;
-}
+
 /* =========================================
-   Mobile Responsive Fixes (أكواد الموبايل)
+   MOBILE RESPONSIVE FIXES (أهم جزء للموبايل)
    ========================================= */
 @media screen and (max-width: 768px) {
-
-    /* 1. تظبيط الأحجام العامة */
-    .container, .row, .col-*, .header-team h1, .h-grad, .h-grad-2 {
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    /* 2. الهيدر والنافيجيشن (القائمة) */
-    header {
-        height: auto !important;
-        padding-bottom: 20px;
-    }
     
-    .nav-list {
-        display: none !important; /* إخفاء القائمة مؤقتاً في الموبايل أو تحويلها لقائمة منسدلة مستقبلاً */
-        /* لو عاوزاها تظهر بس تحت بعض: */
-        /* display: flex !important; flex-direction: column; height: auto; */
-    }
-
-   .header-photo { 
-    width: 100%;
-    height: auto;
-    min-height: 400px;
-    background-color: #fdfdfd !important; /* إجبار اللون الأبيض */
-    background-image: none !important;    /* إجبار إلغاء الصورة */
-}
-
-    /* 3. النصوص الكبيرة (Hero Text) */
-    .header-team h1 {
-        font-size: 2rem !important; /* تصغير الخط الكبير */
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .header-text h1 {
-        font-size: 40px !important;
-    }
-
-    /* 4. كروت المعلومات (About & Skills cards) */
-    .about, .benifets, .cards-team, .Download {
-        height: auto !important; /* إلغاء الطول الثابت */
-        padding-bottom: 50px;
-    }
-
-    .internal-box, .card-team, .content-download {
+    /* منع خروج العناصر عن عرض الشاشة */
+    html, body {
+        overflow-x: hidden !important;
         width: 100% !important;
-        height: auto !important;
-        margin: 10px 0 !important;
     }
 
-    /* ترتيب العناصر فوق بعضها بدل جنب بعض */
+    /* إلغاء العروض الثابتة */
+    .container, .row, .col-*, 
+    .header-team h1, .h-grad, .h-grad-2, 
+    .header-text h1 {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        white-space: normal !important;
+    }
+
+    /* ترتيب العناصر عمودياً */
     .row {
         display: flex;
         flex-direction: column;
     }
-
-    .col-6, .col-5, .col-4, .col-2, .col-7, .col-3, .col-8 {
+    .col-2, .col-7, .col-6, .col-4, .col-3 {
         width: 100% !important;
         display: block;
-    }
-
-    /* 5. إصلاح الصور */
-    .benf-img img, .about-img img, .circle-img {
-        margin: 20px auto !important;
-        display: block;
-        max-width: 70% !important;
-    }
-
-    .logo-back {
-        text-align: center;
         margin-bottom: 20px;
     }
 
-    /* 6. إصلاح الفوتر (Footer) */
-    footer {
-        height: auto !important;
-        padding: 20px 0;
-    }
-    
-    .links-list {
-        margin-right: 0 !important;
-        justify-content: center !important;
-    }
-    
-    footer .row {
-        text-align: center;
-    }
+    /* تصغير الخطوط الكبيرة */
+    .header-text h1 { font-size: 2.5rem !important; }
+    .h-grad, .h-grad-2 { font-size: 1.8rem !important; text-align: center; }
+    .internal-box > h1 { font-size: 2rem !important; text-align: center; }
 
-    /* 7. إصلاح السكيلز (Skills Fix)  */
-    .skill-item {
-        flex-direction: column; /* الأيقونة تنزل تحت الكلام */
+    /* إخفاء القائمة العلوية في الموبايل مؤقتاً */
+    .nav-list { display: none !important; }
+
+    /* توسيط الصور */
+    .benf-img img, .about-img img, .circle-img, .logo img {
+        margin: 0 auto !important;
+        display: block;
+        max-width: 60% !important;
+    }
+    
+    .logo-back { text-align: center; }
+
+    /* تعديلات الفوتر */
+    .links-list { margin-right: 0 !important; justify-content: center !important; }
+    footer .row { text-align: center; }
+    
+    /* زرار الريزوميه يظهر لوحده */
+    .nav-btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
         text-align: center;
-    }
-    
-    .skill-icons i {
-        margin: 10px 5px !important;
-    }
-    
-    /* 8. إصلاح المشاريع (Projects) */
-    .Download-button {
-        width: 100% !important;
-        margin-bottom: 10px;
-    }
-    
-    .content-download {
-        position: relative !important; /* عشان ما يغطيش على الزراير */
-        width: 100% !important;
-        left: 0 !important;
     }
 }
