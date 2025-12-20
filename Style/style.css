@@ -218,104 +218,56 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
 .links-list { margin-right: 100px; }
 
 /* =======================================================
-   REAL MOBILE LAYOUT FIX (NO DESKTOP SHIFTS)
+   MOBILE FIXES (تصغير الصورة + فجوة إجبارية)
    ======================================================= */
 @media screen and (max-width: 768px) {
 
-    /* ===== RESET عام ===== */
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    /* ===== HEADER ===== */
+    /* 1. الحاوية الأم (الكونتينر): نديها براح طولي */
     .header-team {
         height: auto !important;
-        min-height: unset !important;
-        padding: 30px 15px !important;
+        min-height: 600px !important; /* طول زيادة عشان مفيش حاجة تتقص */
+        padding-top: 20px !important;
+        padding-bottom: 50px !important;
+        display: flex !important;
+        flex-direction: column !important; /* رص العناصر فوق بعض */
+        justify-content: flex-start !important; /* ابدأ من فوق مش من النص */
+        align-items: center !important;
+    }
+
+    /* 2. الصورة: تصغير + مسافة سفلية ضخمة */
+    .header-text img {
+        width: 100px !important;  /* صغرتها لـ 100 بيكسل بس */
+        height: 100px !important;
+        margin-top: 20px !important;
+        margin-bottom: 60px !important; /* مسافة 60 بيكسل فاضية تحت الصورة */
         display: block !important;
-        text-align: center;
+        border-radius: 50%;
+        border: 2px solid #FF1493;
+        object-fit: cover;
     }
 
-    /* إخفاء صورة الهيدر (عشان ما تتكرر) */
-    .header-team img {
-        display: none !important;
-    }
-
-    /* النصوص فوق */
-    .header-text {
-        position: static !important;
-        transform: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .header-text p {
-        margin: 5px 0 !important;
-        font-size: 16px !important;
-        color: #FF1493 !important;
-    }
-
-    .header-text h1 {
-        font-size: 22px !important;
-        margin: 10px 0 !important;
+    /* 3. الكلام (الاسم والوظيفة): ينزل تحت غصب عنه */
+    .header-text h1, .h-grad, .header-text p {
+        margin-top: 0 !important; /* المسافة خدناها خلاص من الصورة */
+        width: 90% !important;
+        text-align: center !important;
+        font-size: 20px !important; /* تصغير الخط شوية عشان ميكسرش */
+        line-height: 1.6 !important;
+        
+        /* ألوان ثابتة وواضحة للموبايل */
         background-image: none !important;
         color: #FF1493 !important;
         -webkit-text-fill-color: #FF1493 !important;
-    }
-
-    /* ===== الكارد الرئيسية ===== */
-    .about-card,
-    .profile-card,
-    .card {
-        width: 100% !important;
-        margin: 20px auto !important;
-        padding: 20px !important;
-        text-align: center;
-    }
-
-    /* الصورة داخل الكارد */
-    .about-card img,
-    .profile-card img,
-    .card img {
-        width: 120px !important;
-        height: 120px !important;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: 15px auto !important;
-        display: block;
-    }
-
-    /* ===== GRID FIX ===== */
-    .container,
-    .row {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .row {
+        
         display: block !important;
+        position: relative !important;
+        clear: both !important;
     }
 
-    [class*="col-"] {
-        width: 100% !important;
-        padding: 0 12px !important;
-        margin-bottom: 20px;
-    }
-
-    /* ===== NAV ===== */
-    .nav-list {
-        display: none !important;
-    }
-
-    /* ===== SECTIONS ===== */
-    section {
-        padding: 30px 15px !important;
-    }
+    /* 4. إخفاء أي عناصر تانية ممكن تكون بتزاحم */
+    .nav-list { display: none !important; }
+    
+    /* تنسيقات عامة عشان باقي الصفحة ميبوظش */
+    .container, .row, .col-* { width: 100% !important; max-width: 100% !important; }
+    .benf-img img, .about-img img { max-width: 60% !important; margin: 20px auto !important; display: block; }
 }
-
