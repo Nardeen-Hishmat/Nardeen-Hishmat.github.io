@@ -284,4 +284,16 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
     
     /* تصغير الخط في القوائم */
     .ben-list li { font-size: 14px !important; }
+/* إصلاح مسافة الصورة في الهيدر */
+.header-text img {
+    margin-bottom: 30px !important; /* بتعمل مسافة تحت الصورة */
+    width: 150px; /* بنظبط حجم الصورة عشان متبقاش عملاقة في الموبايل */
+    height: 150px;
+    object-fit: cover;
+}
+
+/* تظبيط بسيط للاسم عشان يبعد شوية كمان */
+.header-text p {
+    margin-top: 10px;
+}
 }
