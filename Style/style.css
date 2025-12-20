@@ -220,54 +220,52 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
 /* =======================================================
    MOBILE FIXES (تصغير الصورة + فجوة إجبارية)
    ======================================================= */
-@media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
 
-    /* 1. الحاوية الأم (الكونتينر): نديها براح طولي */
+    /* 1. إصلاح الهيدر بدون تدمير الصفحة */
     .header-team {
         height: auto !important;
-        min-height: 600px !important; /* طول زيادة عشان مفيش حاجة تتقص */
-        padding-top: 20px !important;
-        padding-bottom: 50px !important;
-        display: flex !important;
-        flex-direction: column !important; /* رص العناصر فوق بعض */
-        justify-content: flex-start !important; /* ابدأ من فوق مش من النص */
-        align-items: center !important;
+        padding-bottom: 50px;
+        display: block !important; /* نلغي الـ Flexbox اللي ضغط الصفحة */
     }
 
-    /* 2. الصورة: تصغير + مسافة سفلية ضخمة */
+    /* 2. تظبيط الصورة في النص مع مسافة تحتها */
     .header-text img {
-        width: 100px !important;  /* صغرتها لـ 100 بيكسل بس */
-        height: 100px !important;
-        margin-top: 20px !important;
-        margin-bottom: 60px !important; /* مسافة 60 بيكسل فاضية تحت الصورة */
-        display: block !important;
+        display: block;
+        margin: 20px auto 30px auto !important; /* 30px مسافة تحت الصورة */
+        width: 120px !important;
+        height: 120px !important;
         border-radius: 50%;
         border: 2px solid #FF1493;
-        object-fit: cover;
     }
 
-    /* 3. الكلام (الاسم والوظيفة): ينزل تحت غصب عنه */
-    .header-text h1, .h-grad, .header-text p {
-        margin-top: 0 !important; /* المسافة خدناها خلاص من الصورة */
-        width: 90% !important;
+    /* 3. تظبيط النصوص عشان متخرجش بره الشاشة */
+    .h-grad, .h-grad-2, .header-text h1 {
+        width: 100% !important; /* تاخد عرض الشاشة بالكامل */
+        font-size: 22px !important;
         text-align: center !important;
-        font-size: 20px !important; /* تصغير الخط شوية عشان ميكسرش */
-        line-height: 1.6 !important;
-        
-        /* ألوان ثابتة وواضحة للموبايل */
         background-image: none !important;
         color: #FF1493 !important;
         -webkit-text-fill-color: #FF1493 !important;
-        
-        display: block !important;
-        position: relative !important;
-        clear: both !important;
+        line-height: 1.5 !important;
     }
 
-    /* 4. إخفاء أي عناصر تانية ممكن تكون بتزاحم */
-    .nav-list { display: none !important; }
+    /* 4. إخفاء القائمة الجانبية في الموبايل */
+    .nav-list {
+        display: none !important;
+    }
+
+    /* 5. منع أي عنصر إنه يكون أعرض من الشاشة (ده سبب التصغير الغريب) */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
     
-    /* تنسيقات عامة عشان باقي الصفحة ميبوظش */
-    .container, .row, .col-* { width: 100% !important; max-width: 100% !important; }
-    .benf-img img, .about-img img { max-width: 60% !important; margin: 20px auto !important; display: block; }
+    .container {
+        width: 100% !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
