@@ -218,87 +218,104 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
 .links-list { margin-right: 100px; }
 
 /* =======================================================
-   MOBILE HEADER FIX (FINAL & CLEAN)
+   REAL MOBILE LAYOUT FIX (NO DESKTOP SHIFTS)
    ======================================================= */
 @media screen and (max-width: 768px) {
 
-    /* الهيدر كله */
+    /* ===== RESET عام ===== */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
     .header-team {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
         height: auto !important;
-        min-height: 520px;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        min-height: unset !important;
+        padding: 30px 15px !important;
+        display: block !important;
         text-align: center;
     }
 
-    /* الصورة */
-    .header-text img {
-        width: 140px;
-        height: 140px;
-        object-fit: cover;
-        border-radius: 50%;
-        display: block;
-        margin: 0 auto 20px auto;
+    /* إخفاء صورة الهيدر (عشان ما تتكرر) */
+    .header-team img {
+        display: none !important;
+    }
+
+    /* النصوص فوق */
+    .header-text {
         position: static !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* العنوان الرئيسي */
+    .header-text p {
+        margin: 5px 0 !important;
+        font-size: 16px !important;
+        color: #FF1493 !important;
+    }
+
     .header-text h1 {
-        font-size: 24px !important;
-        line-height: 1.4;
-        margin: 10px 0;
-        text-align: center;
+        font-size: 22px !important;
+        margin: 10px 0 !important;
         background-image: none !important;
         color: #FF1493 !important;
         -webkit-text-fill-color: #FF1493 !important;
     }
 
-    /* الاسم أو Eng. Nardeen */
-    .header-text p {
-        margin: 5px 0 15px 0 !important;
-        padding: 0 !important;
-        font-size: 18px;
-        position: static !important;
+    /* ===== الكارد الرئيسية ===== */
+    .about-card,
+    .profile-card,
+    .card {
+        width: 100% !important;
+        margin: 20px auto !important;
+        padding: 20px !important;
         text-align: center;
-        color: #FF1493 !important;
     }
 
-    /* الجريد / الأعمدة */
+    /* الصورة داخل الكارد */
+    .about-card img,
+    .profile-card img,
+    .card img {
+        width: 120px !important;
+        height: 120px !important;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 15px auto !important;
+        display: block;
+    }
+
+    /* ===== GRID FIX ===== */
     .container,
     .row {
         width: 100% !important;
         max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: block !important;
     }
 
-    .col-6,
-    .col-4,
-    .col-3,
-    .col-8 {
+    [class*="col-"] {
         width: 100% !important;
         padding: 0 12px !important;
-        display: block;
+        margin-bottom: 20px;
     }
 
-    /* إخفاء الناف بار في الموبايل */
+    /* ===== NAV ===== */
     .nav-list {
         display: none !important;
     }
 
-    /* أي صور إضافية */
-    .benf-img img,
-    .about-img img {
-        display: block;
-        margin: 20px auto;
-        max-width: 70% !important;
+    /* ===== SECTIONS ===== */
+    section {
+        padding: 30px 15px !important;
     }
 }
+
