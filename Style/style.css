@@ -230,8 +230,8 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
     .header-team {
         height: auto !important;
         min-height: 360px;
-        padding-bottom: 40px;
-        display: flex;
+        padding-bottom: 50px;
+        display: block !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -344,4 +344,32 @@ footer svg:hover { transform: scale(1.2); fill: #FF1493; }
         object-fit: cover;
         transform: none !important;
     }
+
+.header-text img {
+        display: block;
+        margin: 20px auto 30px auto !important;
+        width: 120px !important;
+        height: 120px !important;
+        border-radius: 50%;
+        border: 2px solid #FF1493;
+    }
+
+    /* 3. تظبيط النصوص (بما فيها كلمة Eng. Nardeen) */
+    .h-grad, .h-grad-2, .header-text h1, .header-text p { /* ضفنا .header-text p هنا */
+        width: 100% !important;
+        font-size: 20px !important; /* تصغير بسيط عشان ميكسرش */
+        text-align: center !important; /* إجبار التوسيط */
+        background-image: none !important;
+        color: #FF1493 !important;
+        -webkit-text-fill-color: #FF1493 !important;
+        line-height: 1.5 !important;
+        margin: 0 auto 10px auto !important; /* مسافة صغيرة تحته */
+    }
+
+    /* 4. إخفاء القائمة */
+    .nav-list { display: none !important; }
+
+    /* 5. تنسيقات عامة */
+    html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+    .container { width: 100% !important; padding-left: 15px; padding-right: 15px; }
 }
