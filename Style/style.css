@@ -259,65 +259,104 @@ footer svg {
 footer svg:hover { transform: scale(1.2); fill: #FF1493; }
 .links-list { margin-right: 100px; }
 
-
 /* =========================================
-   MOBILE RESPONSIVE FIXES (أهم جزء للموبايل)
+   MOBILE RESPONSIVE FIXES (تصليح الموبايل النهائي)
    ========================================= */
 @media screen and (max-width: 768px) {
-    
-    /* منع خروج العناصر عن عرض الشاشة */
+
+    /* 1. منع الخروج عن الشاشة تماماً */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
+        position: relative;
     }
 
-    /* إلغاء العروض الثابتة */
-    .container, .row, .col-*, 
-    .header-team h1, .h-grad, .h-grad-2, 
-    .header-text h1 {
+    /* 2. تصغير العناوين العملاقة (أهم إصلاح) */
+    /* المشكلة كانت إن الخط عريض، لازم نصغره لـ 22px */
+    .header-text h1, .typed-os, .h-grad, .h-grad-2 {
+        font-size: 22px !important; 
+        line-height: 1.5 !important;
         width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        white-space: normal !important;
+        white-space: normal !important; /* يسمح للكلام ينزل سطر جديد */
+        word-wrap: break-word !important; /* يكسر الكلمة لو طويلة */
+        text-align: center !important;
+        margin: 10px 0 !important;
     }
 
-    /* ترتيب العناصر عمودياً */
+    /* تصغير الاسم (Eng. Nardeen) */
+    .header-text > p {
+        font-size: 14px !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* 3. تظبيط كارت "About" (عشان الكلام مايكونش مزنوق) */
+    .internal-box, .benf-cont {
+        width: 92% !important; /* يوسع الكارت */
+        margin: 10px auto !important;
+        padding: 15px !important; /* يقلل الهوامش الداخلية */
+        height: auto !important;
+    }
+
+    /* 4. تظبيط القائمة النقطية (البيانات الشخصية) */
+    .ben-list ul {
+        padding-left: 0 !important; /* يلغي المسافة اللي على الشمال */
+        list-style-position: inside !important;
+    }
+    
+    .ben-list li {
+        font-size: 14px !important; /* تصغير خط البيانات */
+        word-break: break-word;
+    }
+
+    /* 5. تظبيط الصورة الشخصية */
+    .circle-img {
+        width: 140px !important; 
+        height: 140px !important;
+        margin: 15px auto !important;
+        display: block;
+        border-width: 2px !important;
+    }
+    
+    /* 6. تظبيط الترتيب (العمود يبقى سطر واحد) */
     .row {
         display: flex;
         flex-direction: column;
-    }
-    .col-2, .col-7, .col-6, .col-4, .col-3 {
+        margin: 0 !important;
         width: 100% !important;
-        display: block;
-        margin-bottom: 20px;
     }
 
-    /* تصغير الخطوط الكبيرة */
-    .header-text h1 { font-size: 2.5rem !important; }
-    .h-grad, .h-grad-2 { font-size: 1.8rem !important; text-align: center; }
-    .internal-box > h1 { font-size: 2rem !important; text-align: center; }
+    .col-6, .col-5, .col-4, .col-3, .col-2, .col-8, .col-md-4 {
+        width: 100% !important;
+        padding: 0 5px !important;
+        display: block;
+    }
 
-    /* إخفاء القائمة العلوية في الموبايل مؤقتاً */
+    /* 7. إخفاء القائمة العلوية مؤقتاً */
     .nav-list { display: none !important; }
-
-    /* توسيط الصور */
-    .benf-img img, .about-img img, .circle-img, .logo img {
-        margin: 0 auto !important;
-        display: block;
-        max-width: 60% !important;
-    }
     
-    .logo-back { text-align: center; }
-
-    /* تعديلات الفوتر */
-    .links-list { margin-right: 0 !important; justify-content: center !important; }
-    footer .row { text-align: center; }
-    
-    /* زرار الريزوميه يظهر لوحده */
+    /* زرار الريزوميه */
     .nav-btn {
         display: block;
-        width: 80%;
+        width: 70%;
         margin: 10px auto;
-        text-align: center;
+        font-size: 14px !important;
+        padding: 8px 0 !important;
     }
+
+    /* 8. تظبيط الهيدر */
+    .header-photo {
+        height: auto !important;
+        min-height: 100vh; /* يملأ الشاشة */
+        background-color: #fdfdfd !important;
+        padding-top: 20px;
+    }
+    
+    .logo-back { margin-bottom: 20px; }
+    
+    /* 9. تظبيط الفوتر */
+    footer {
+        height: auto !important;
+        padding: 20px 0;
+    }
+    .links-list { margin-right: 0 !important; justify-content: center !important; }
 }
